@@ -1,9 +1,10 @@
-import users from "./users.js";
+import users from './users.js';
 
-const getUsersWithFriend = (array, friendName) =>
-  array
-    .filter(({ friends }) => friends.includes(friendName))
-    .map(({ name }) => name);
+const getUsersWithFriend = (users, friendName) => {
+  return users
+    .filter(user => user.friends.includes(friendName))
+    .map(user => user.name);
+};
 
-console.log(getUsersWithFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]
-console.log(getUsersWithFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sheree Anthony' ]
+console.log(getUsersWithFriend(users, 'Briana Decker'));
+console.log(getUsersWithFriend(users, 'Goldie Gentry'));

@@ -1,6 +1,7 @@
-import users from "./users.js";
+import users from './users.js';
 
-const getUsersWithGender = (array, gender) =>
-  array.filter((array) => array.gender === gender).map(({ name }) => name);
+const getUsersWithGender = (users, gender) => {
+  return users.filter(user => user.gender === gender).map(user => user.name);
+};
 
-console.log(getUsersWithGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+console.log(getUsersWithGender(users, 'male'));

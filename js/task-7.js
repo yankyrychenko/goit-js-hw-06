@@ -1,6 +1,7 @@
-import users from "./users.js";
+import users from './users.js';
 
-const calculateTotalBalance = (array) =>
-  array.reduce((acc, { balance }) => acc + balance, 0);
+const calculateTotalBalance = users => {
+  return users.reduce((total, user) => total + user.balance, 0);
+};
 
-console.log(calculateTotalBalance(users)); // 20916
+console.log(calculateTotalBalance(users));
